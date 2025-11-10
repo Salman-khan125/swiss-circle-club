@@ -51,6 +51,7 @@ const Navbar = () => {
                   borderStyle: "solid",
                   fontSize: "0.75rem",
                   width: { xs: 100, sm: 140, md: 200 },
+                  display:{xs: "none", md: "flex"}
                 }}
               />
 
@@ -82,13 +83,14 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
                 color: "white",
                 mt: 1,
-                ml: 5,
+                ml: 4,
               }}
               onClick={toggleDrawer}
             >
               <MenuIcon />
             </IconButton>
           </Toolbar>
+          
         </Container>
       </AppBar>
 
@@ -184,7 +186,7 @@ const Navbar = () => {
                 top: "50%",
                 transform: "translateY(-50%)",
                 mt: -3,
-                display:{xs:"flex", sm:"auto",md :"flex"}
+                display:{xs:"none", sm:"auto",md :"flex"}
               }}
             />
             <Typography
@@ -197,7 +199,7 @@ const Navbar = () => {
                 transform: "translateY(-50%)",
                 mt: -3,
                 width: 40,
-                 display:{xs:"block", sm:"auto",md :"flex"}
+                 display:{xs:"none", sm:"auto",md :"flex"}
               }}
             >
               LOGIN
@@ -278,7 +280,7 @@ const Navbar = () => {
               filter: "brightness(0) invert(1)",
             }}
           />
-          <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, color:"#9f7a3c" }}>
+          <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, color:"#fff" }}>
             LOGIN
           </Typography>
         </Box>
