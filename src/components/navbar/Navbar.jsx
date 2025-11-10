@@ -21,7 +21,7 @@ const Navbar = () => {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: "#8B7355",
+          backgroundColor: "#9f7a3c",
           color: "white",
           top: 0,
           zIndex: 1400,
@@ -62,25 +62,39 @@ const Navbar = () => {
 
               <Box
                 component="img"
-                src="/assets/facebook.png"
+                src="/assets/hero/facebook.png"
                 alt="Facebook"
                 sx={{ cursor: "pointer", width: 30, height: 30, ml: 8 }}
               />
 
               <Box
                 component="img"
-                src="/assets/in.png"
+                src="/assets/hero/in.png"
                 alt="in"
-                sx={{ cursor: "pointer", width: 30, height: 30, ml: 2 }}
+                sx={{ cursor: "pointer", width: 30, height: 30, ml: 2,
+                  mr:{xs:"-15px", md:"0px"}
+                 }}
               />
             </Box>
+                {/* 3 dots */}
+            <IconButton
+              sx={{
+                display: { xs: "block", md: "none" },
+                color: "white",
+                mt: 1,
+                ml: 5,
+              }}
+              onClick={toggleDrawer}
+            >
+              <MenuIcon />
+            </IconButton>
           </Toolbar>
         </Container>
       </AppBar>
 
       {/* ✅ MAIN NAVBAR */}
       <AppBar
-        position="fixed"
+        position="relative"
         sx={{
           backgroundColor: "rgba(0, 0, 0, 0.7)",
           top: "32px",
@@ -97,9 +111,10 @@ const Navbar = () => {
             <Box sx={{ flexGrow: 1 }}>
               <Box
                 component="img"
-                src="/assets/logo.png"
+                src="/assets/hero/logo.png"
                 alt="SWISS CIRCLE CLUB"
-                sx={{ height: "100px", width: "auto" }}
+                sx={{ height: "100px", width: "auto" , display:{xs:"block"}}}
+                
               />
             </Box>
 
@@ -124,52 +139,41 @@ const Navbar = () => {
               ].map((item) => (
                 <Typography
                   key={item}
-                sx={{
-  mb: "10",
-  color: 'white',
-  cursor: 'pointer',
-  fontWeight: 500,
-  fontSize: '0.9rem',
-  position: 'relative',
+                  sx={{
+                    mb: "10",
+                    color: "white",
+                    cursor: "pointer",
+                    fontWeight: 500,
+                    fontSize: "0.9rem",
+                    position: "relative",
 
-  "&::after": {
-    content: '""',
-    position: "absolute",
-    bottom: -4,
-    left: 0,
-    width: "0%",
-    height: "2px",
-    backgroundColor: "#8B7355",     // ✅ your brown theme color
-    transition: "width 0.3s ease",
-    borderRadius: 1,
-  },
+                    "&::after": {
+                      content: '""',
+                      position: "absolute",
+                      bottom: -4,
+                      left: 0,
+                      width: "0%",
+                      height: "2px",
+                      backgroundColor: "#8B7355", // ✅ your brown theme color
+                      transition: "width 0.3s ease",
+                      borderRadius: 1,
+                    },
 
-  "&:hover::after": {
-    width: "100%",                  // ✅ underline expands on hover
-  },
-}}
-
+                    "&:hover::after": {
+                      width: "100%",
+                    },
+                  }}
                 >
                   {item}
                 </Typography>
               ))}
             </Box>
-            <IconButton
-              sx={{
-                display: { xs: "block", md: "none" },
-                color: "white",
-                mt: 4, // ✅ moves it lower
-                ml: 5,
-              }}
-              onClick={toggleDrawer}
-            >
-              <MenuIcon />
-            </IconButton>
+            
 
-            {/* ✅ LOGIN ICON (desktop) */}
+            {/* LOGIN ICON (desktop) */}
             <Box
               component="img"
-              src="/assets/login.png"
+              src="/assets/hero/login.png"
               alt="Login"
               sx={{
                 cursor: "pointer",
@@ -180,6 +184,7 @@ const Navbar = () => {
                 top: "50%",
                 transform: "translateY(-50%)",
                 mt: -3,
+                display:{xs:"flex", sm:"auto",md :"flex"}
               }}
             />
             <Typography
@@ -192,6 +197,7 @@ const Navbar = () => {
                 transform: "translateY(-50%)",
                 mt: -3,
                 width: 40,
+                 display:{xs:"block", sm:"auto",md :"flex"}
               }}
             >
               LOGIN
@@ -262,7 +268,7 @@ const Navbar = () => {
         >
           <Box
             component="img"
-            src="/assets/login.png"
+            src="/assets/hero/login.png"
             alt="Login"
             sx={{
               width: 28,
@@ -272,7 +278,7 @@ const Navbar = () => {
               filter: "brightness(0) invert(1)",
             }}
           />
-          <Typography sx={{ fontSize: "0.9rem", fontWeight: 600 }}>
+          <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, color:"#9f7a3c" }}>
             LOGIN
           </Typography>
         </Box>

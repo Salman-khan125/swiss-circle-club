@@ -5,6 +5,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { Box } from '@mui/material';
 import Navbar from './components/navbar/Navbar';
 import HomeSection from './components/herosection/HeroSection';
+import Community from './components/community/Community';
+import MemberOfSCC from './components/memberofscc/MemberOfSCC';
+import ClubOffers from './components/clubofffers/ClubOffers';
 
 const theme = createTheme({
   palette: {
@@ -27,6 +30,9 @@ function App() {
       <Box sx={{ flexGrow: 1 }}>
         <Navbar />
         <HomeSection />
+         <Community/> 
+         <MemberOfSCC/>
+         <ClubOffers/>
       </Box>
     </ThemeProvider>
   );
