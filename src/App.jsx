@@ -8,6 +8,7 @@ import HomeSection from './components/herosection/HeroSection';
 import Community from './components/community/Community';
 import MemberOfSCC from './components/memberofscc/MemberOfSCC';
 import ClubOffers from './components/clubofffers/ClubOffers';
+import Topic from './components/topic/Topic';
 
 const theme = createTheme({
   palette: {
@@ -33,6 +34,7 @@ function App() {
          <Community/> 
          <MemberOfSCC/>
          <ClubOffers/>
+         <Topic/>
       </Box>
     </ThemeProvider>
   );

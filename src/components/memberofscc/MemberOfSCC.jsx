@@ -6,7 +6,7 @@ const MemberOfSCC = () => {
     {
       icon: "/assets/memberofscc/networking.png",
       alt: "Networking icon",
-      title: "1. Networking leicht gemacht:",
+      title: "1. Networking leicht gemacht",
       desc: `Knüpfen Sie wertvolle Kontakte, die
 Ihnen beruflich und privat
 weiterhelfen.`
@@ -14,7 +14,7 @@ weiterhelfen.`
     {
       icon: "/assets/memberofscc/wissen.png",
       alt: "Wissen icon",
-      title: "2. Wissen und Expertise:",
+      title: "2. Wissen und Expertise",
       desc: `Ob rechtliche Tipps oder Insiderinfos
 zum Alltag – im SWISS CIRCLE 
 CLUB finden Sie alle Infos, die Sie 
@@ -23,7 +23,7 @@ brauchen.`
     {
       icon: "/assets/memberofscc/event.png",
       alt: "Event icon",
-      titleParts: ["3. Exklusive Veranstaltungen", "& viele weitere Benefits:"],
+      titleParts: ["3. Exklusive Veranstaltungen", "& viele weitere Benefits"],
       desc: `Treffen Sie Gleichgesinnte und
 profitieren Sie auf
 einzigartigen
@@ -52,7 +52,7 @@ Erfahrungen.`
             mb: { xs: 5, md: 8 },
           }}
         >
-          3 gute Gründe für eine Mitgliedschaft im Swiss Circle Club:
+          3 gute Gründe für eine Mitgliedschaft im Swiss Circle Club
         </Typography>
 
         <Grid
