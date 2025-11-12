@@ -13,8 +13,8 @@ const Topic = () => {
     { 
       img: "/assets/topic/b.jpg", 
       category: "BLOG / MENSCHEN", 
-      title: "", 
-      subtitle: "" 
+      title: " Einzigartiges Handwerk", 
+      subtitle: "QUALITÄT DIE MAN SPÜRT" 
     },
     { 
       img: "/assets/topic/e.jpg", 
@@ -28,7 +28,7 @@ const Topic = () => {
       img: "/assets/topic/d.png", 
       category: "EVENTS & KUNST", 
       title: "HILFE BEI DER DURCHFÜHRUNG", 
-      subtitle: "" 
+      subtitle: "Varianzverfahren" 
     },
     { 
       img: "/assets/topic/e.jpg", 
@@ -42,7 +42,7 @@ const Topic = () => {
       img: "/assets/topic/a.jpg", 
       category: "BLOG / MENSCHEN", 
       title: "FÜR DIE LIEBE MUSS MAN WAS TUN*", 
-      subtitle: "" 
+      subtitle: "KREATIVITÄT REICHT NICHT" 
     },
     { 
       img: "/assets/topic/b.jpg", 
