@@ -9,6 +9,9 @@ import Community from './components/community/Community';
 import MemberOfSCC from './components/memberofscc/MemberOfSCC';
 import ClubOffers from './components/clubofffers/ClubOffers';
 import Topic from './components/topic/Topic';
+import CityGuide from './components/cityguide/CityGuide';
+import Voices from './components/voices/Voices';
+import Footer from './components/footer/Footer';
 
 const theme = createTheme({
   palette: {
@@ -35,6 +38,9 @@ function App() {
          <MemberOfSCC/>
          <ClubOffers/>
          <Topic/>
+         <CityGuide/>
+         <Voices/>
+         <Footer/>
       </Box>
     </ThemeProvider>
   );

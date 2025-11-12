@@ -7,8 +7,8 @@ const Community = () => {
     <Box
       sx={{
         width: "100%",
-        py: { xs: 6, md: 10 },
-        backgroundColor: "#fff",
+        py: { xs: 6, md: 30 },
+        backgroundColor: "#f8f6f2",
         
       }}
     >

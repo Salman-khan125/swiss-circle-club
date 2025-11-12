@@ -6,7 +6,7 @@ const ClubOffers = () => {
     <Box
       sx={{
         width: "100%",
-        backgroundColor: "#fff",
+        backgroundColor: "#f8f6f2",
         py: { xs: 6, md: 10 },
     
       }}

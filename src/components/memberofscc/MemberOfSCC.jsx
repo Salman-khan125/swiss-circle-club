@@ -36,7 +36,7 @@ Erfahrungen.`
     <Box
       sx={{
         width: "100%",
-        backgroundColor: "#F4EFE6",
+        backgroundColor: "#f8f6f2",
         py: { xs: 6, md: 10 },
         mt: { xs: 2, md: 4 },
         

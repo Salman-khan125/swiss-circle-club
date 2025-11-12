@@ -65,7 +65,7 @@ const Topic = () => {
   ];
 
   return (
-    <Box sx={{ width: "100%", backgroundColor: "#fff", py: { xs: 5, md: 10 } }}>
+    <Box sx={{ width: "100%", backgroundColor: "#f8f6f2", py: { xs: 5, md: 10 } }}>
       <Container maxWidth="xl">
         
         {/* Header */}
