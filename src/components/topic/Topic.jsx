@@ -73,7 +73,7 @@ const Topic = () => {
           sx={{
             fontSize: { xs: "24px", md: "40px" },
             fontWeight: 700,
-            color: "#000",
+            color: "#A57C30",
             mb: 8, // Increased bottom margin
             textAlign: "center"
           }}
