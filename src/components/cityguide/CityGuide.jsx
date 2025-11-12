@@ -5,11 +5,11 @@ const CityGuide = () => {
   const cards = [
     {
       title: "COMMUNITY",
-      image: "/assets/cityguide/community.png", // replace with your actual image
+      image: "/assets/cityguide/community.png", 
     },
     {
       title: "CITY GUIDES",
-      image: "/assets/cityguide/city.png", // replace with your actual image
+      image: "/assets/cityguide/city.png", 
     },
   ];
 

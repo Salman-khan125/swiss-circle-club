@@ -25,6 +25,7 @@ const Voices = () => {
     <Box
       sx={{
         position: "relative",
+         backgroundColor: "#f8f6f2",
         width: "100%",
         minHeight: "100vh",
         backgroundImage: "url('/assets/voices/voice.jpg')", // replace with your actual image path

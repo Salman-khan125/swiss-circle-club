@@ -21,22 +21,62 @@ const Navbar = () => {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: "#9f7a3c",
+          backgroundColor: "#9f7a3",
           color: "white",
           top: 0,
           zIndex: 1400,
+          left: 0,
+          right: 0,
+          overflow: "hidden",
+          boxShadow: "none",
+          width: "100%",
         }}
       >
-        <Container maxWidth="xl">
+        <Container
+          maxWidth="xl"
+          disableGutters // ✅ removes side padding that causes scroll
+          sx={{
+            width: "100%",
+            mx: "auto",
+            overflow: "hidden",
+          }}
+        >
           <Toolbar
             variant="dense"
             sx={{
               minHeight: "32px !important",
-              justifyContent: "flex-end",
+              justifyContent: { xs: "space-between", md: "flex-end" },
               py: 0.5,
+              px: { xs: 1.5, sm: 2 },
+              overflow: "hidden",
+              width: "100%",
             }}
           >
-            <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+            {/* ☰ Menu Icon */}
+            <IconButton
+              sx={{
+                display: { xs: "block", md: "none" },
+                color: "white",
+                flexShrink: 0,
+              }}
+              onClick={toggleDrawer}
+            >
+              <MenuIcon />
+            </IconButton>
+
+            {/* Right content */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                flexWrap: "nowrap",
+                gap: { xs: 1, sm: 2 },
+                overflow: "hidden",
+                width: "100%",
+                maxWidth: "100%",
+              }}
+            >
               <InputBase
                 placeholder="Search..."
                 inputProps={{ "aria-label": "search" }}
@@ -46,17 +86,21 @@ const Navbar = () => {
                   px: 1,
                   py: 0.3,
                   borderRadius: 20,
-                  borderBlockColor: "#ffffff",
-                  borderWidth: 2,
-                  borderStyle: "solid",
+                  border: "2px solid white",
                   fontSize: "0.75rem",
                   width: { xs: 100, sm: 140, md: 200 },
-                  display:{xs: "none", md: "flex"}
+                  display: { xs: "none", md: "flex" },
                 }}
               />
 
               <Typography
-                sx={{ cursor: "pointer", fontSize: "0.75rem", color: "white" }}
+                sx={{
+                  cursor: "pointer",
+                  fontSize: { xs: "0.7rem", sm: "0.75rem" },
+                  color: "white",
+                  whiteSpace: "nowrap",
+                  flexShrink: 0,
+                }}
               >
                 De / ENG
               </Typography>
@@ -65,32 +109,29 @@ const Navbar = () => {
                 component="img"
                 src="/assets/hero/facebook.png"
                 alt="Facebook"
-                sx={{ cursor: "pointer", width: 30, height: 30, ml: 8 }}
+                sx={{
+                  cursor: "pointer",
+                  width: { xs: 20, sm: 30 },
+                  height: { xs: 20, sm: 30 },
+                  ml: { xs: 0, md: 8 },
+                  flexShrink: 0,
+                }}
               />
 
               <Box
                 component="img"
                 src="/assets/hero/in.png"
                 alt="in"
-                sx={{ cursor: "pointer", width: 30, height: 30, ml: 2,
-                  mr:{xs:"-15px", md:"0px"}
-                 }}
+                sx={{
+                  cursor: "pointer",
+                  width: { xs: 20, sm: 30 },
+                  height: { xs: 20, sm: 30 },
+                  ml: { xs: 0, sm: 1 },
+                  flexShrink: 0,
+                }}
               />
             </Box>
-                {/* 3 dots */}
-            <IconButton
-              sx={{
-                display: { xs: "block", md: "none" },
-                color: "white",
-                mt: 1,
-                ml: 4,
-              }}
-              onClick={toggleDrawer}
-            >
-              <MenuIcon />
-            </IconButton>
           </Toolbar>
-          
         </Container>
       </AppBar>
 
@@ -115,8 +156,11 @@ const Navbar = () => {
                 component="img"
                 src="/assets/hero/logo.png"
                 alt="SWISS CIRCLE CLUB"
-                sx={{ height: "100px", width: "auto" , display:{xs:"block"}}}
-                
+                sx={{
+                  height: "100px",
+                  width: "auto",
+                  display: { xs: "block" },
+                }}
               />
             </Box>
 
@@ -170,7 +214,6 @@ const Navbar = () => {
                 </Typography>
               ))}
             </Box>
-            
 
             {/* LOGIN ICON (desktop) */}
             <Box
@@ -186,7 +229,7 @@ const Navbar = () => {
                 top: "50%",
                 transform: "translateY(-50%)",
                 mt: -3,
-                display:{xs:"none", sm:"auto",md :"flex"}
+                display: { xs: "none", sm: "auto", md: "flex" },
               }}
             />
             <Typography
@@ -199,7 +242,7 @@ const Navbar = () => {
                 transform: "translateY(-50%)",
                 mt: -3,
                 width: 40,
-                 display:{xs:"none", sm:"auto",md :"flex"}
+                display: { xs: "none", sm: "auto", md: "flex" },
               }}
             >
               LOGIN
@@ -213,7 +256,7 @@ const Navbar = () => {
 
       {/* ✅ MOBILE DRAWER (fully fixed + themed + login bottom) */}
       <Drawer
-        anchor="right"
+        anchor="left"
         open={mobileOpen}
         onClose={toggleDrawer}
         sx={{
@@ -280,7 +323,9 @@ const Navbar = () => {
               filter: "brightness(0) invert(1)",
             }}
           />
-          <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, color:"#fff" }}>
+          <Typography
+            sx={{ fontSize: "0.9rem", fontWeight: 600, color: "#fff" }}
+          >
             LOGIN
           </Typography>
         </Box>
