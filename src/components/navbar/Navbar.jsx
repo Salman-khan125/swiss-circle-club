@@ -17,123 +17,124 @@ const Navbar = () => {
 
   return (
     <>
-      {/* ✅ TOP BAR */}
-      <AppBar
-        position="fixed"
+      {/* TOP BAR */}
+<AppBar
+  position="fixed"
+  sx={{
+    backgroundColor: "#9f7a3c",
+    color: "white",
+    top: 0,
+    zIndex: 1400,
+    left: 0,
+    right: 0,
+    overflow: "hidden",
+    boxShadow: "none",
+    width:"100%",
+  }}
+>
+  <Container
+    maxWidth="xl"
+    disableGutters 
+    sx={{
+      width: "100%",
+      mx: "auto",
+      overflow: "hidden",
+    }}
+  >
+    <Toolbar
+      variant="dense"
+      sx={{
+        minHeight: "32px !important",
+        justifyContent: { xs: "space-between", md: "flex-end" },
+        py: 0.5,
+        px: { xs: 1.5, sm: 2 },
+        overflow: "hidden",
+        width: "100%",
+      }}
+    >
+      {/* Menu  */}
+      <IconButton
         sx={{
-          backgroundColor: "#9f7a3",
+          display: { xs: "block", md: "none" },
           color: "white",
-          top: 0,
-          zIndex: 1400,
-          left: 0,
-          right: 0,
+          flexShrink: 0,
+        }}
+        onClick={toggleDrawer}
+      >
+        <MenuIcon />
+      </IconButton>
+
+    
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-end",
+          flexWrap: "nowrap",
+          gap: { xs: 1, sm: 2 },
           overflow: "hidden",
-          boxShadow: "none",
           width: "100%",
+          maxWidth: "100%",
         }}
       >
-        <Container
-          maxWidth="xl"
-          disableGutters // ✅ removes side padding that causes scroll
+        <InputBase
+          placeholder="Search..."
+          inputProps={{ "aria-label": "search" }}
           sx={{
-            width: "100%",
-            mx: "auto",
-            overflow: "hidden",
+            backgroundColor: "transparent",
+            color: "#ffffff",
+            px: 1,
+            py: 0.3,
+            borderRadius: 20,
+            border: "2px solid white",
+            fontSize: "0.75rem",
+            width: { xs: 100, sm: 140, md: 200 },
+            display: { xs: "none", md: "flex" },
+          }}
+        />
+
+        <Typography
+          sx={{
+            cursor: "pointer",
+            fontSize: { xs: "0.7rem", sm: "0.75rem" },
+            color: "white",
+            whiteSpace: "nowrap",
+            flexShrink: 0,
           }}
         >
-          <Toolbar
-            variant="dense"
-            sx={{
-              minHeight: "32px !important",
-              justifyContent: { xs: "space-between", md: "flex-end" },
-              py: 0.5,
-              px: { xs: 1.5, sm: 2 },
-              overflow: "hidden",
-              width: "100%",
-            }}
-          >
-            {/* ☰ Menu Icon */}
-            <IconButton
-              sx={{
-                display: { xs: "block", md: "none" },
-                color: "white",
-                flexShrink: 0,
-              }}
-              onClick={toggleDrawer}
-            >
-              <MenuIcon />
-            </IconButton>
+          De / ENG
+        </Typography>
 
-            {/* Right content */}
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-end",
-                flexWrap: "nowrap",
-                gap: { xs: 1, sm: 2 },
-                overflow: "hidden",
-                width: "100%",
-                maxWidth: "100%",
-              }}
-            >
-              <InputBase
-                placeholder="Search..."
-                inputProps={{ "aria-label": "search" }}
-                sx={{
-                  backgroundColor: "transparent",
-                  color: "#ffffff",
-                  px: 1,
-                  py: 0.3,
-                  borderRadius: 20,
-                  border: "2px solid white",
-                  fontSize: "0.75rem",
-                  width: { xs: 100, sm: 140, md: 200 },
-                  display: { xs: "none", md: "flex" },
-                }}
-              />
+        <Box
+          component="img"
+          src="/assets/hero/facebook.png"
+          alt="Facebook"
+          sx={{
+            cursor: "pointer",
+            width: { xs: 20, sm: 30 },
+            height: { xs: 20, sm: 30 },
+            ml: { xs: 0, md: 8 },
+            flexShrink: 0,
+          }}
+        />
 
-              <Typography
-                sx={{
-                  cursor: "pointer",
-                  fontSize: { xs: "0.7rem", sm: "0.75rem" },
-                  color: "white",
-                  whiteSpace: "nowrap",
-                  flexShrink: 0,
-                }}
-              >
-                De / ENG
-              </Typography>
+        <Box
+          component="img"
+          src="/assets/hero/in.png"
+          alt="in"
+          sx={{
+            cursor: "pointer",
+            width: { xs: 20, sm: 30 },
+            height: { xs: 20, sm: 30 },
+            ml: { xs: 0, sm: 1 },
+            flexShrink: 0,
+          }}
+        />
+      </Box>
+    </Toolbar>
+  </Container>
+</AppBar>
 
-              <Box
-                component="img"
-                src="/assets/hero/facebook.png"
-                alt="Facebook"
-                sx={{
-                  cursor: "pointer",
-                  width: { xs: 20, sm: 30 },
-                  height: { xs: 20, sm: 30 },
-                  ml: { xs: 0, md: 8 },
-                  flexShrink: 0,
-                }}
-              />
-
-              <Box
-                component="img"
-                src="/assets/hero/in.png"
-                alt="in"
-                sx={{
-                  cursor: "pointer",
-                  width: { xs: 20, sm: 30 },
-                  height: { xs: 20, sm: 30 },
-                  ml: { xs: 0, sm: 1 },
-                  flexShrink: 0,
-                }}
-              />
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
 
       {/* ✅ MAIN NAVBAR */}
       <AppBar
@@ -156,11 +157,8 @@ const Navbar = () => {
                 component="img"
                 src="/assets/hero/logo.png"
                 alt="SWISS CIRCLE CLUB"
-                sx={{
-                  height: "100px",
-                  width: "auto",
-                  display: { xs: "block" },
-                }}
+                sx={{ height: "100px", width: "auto" , display:{xs:"block"}}}
+                
               />
             </Box>
 
@@ -214,6 +212,7 @@ const Navbar = () => {
                 </Typography>
               ))}
             </Box>
+            
 
             {/* LOGIN ICON (desktop) */}
             <Box
@@ -229,7 +228,7 @@ const Navbar = () => {
                 top: "50%",
                 transform: "translateY(-50%)",
                 mt: -3,
-                display: { xs: "none", sm: "auto", md: "flex" },
+                display:{xs:"none", sm:"auto",md :"flex"}
               }}
             />
             <Typography
@@ -242,7 +241,7 @@ const Navbar = () => {
                 transform: "translateY(-50%)",
                 mt: -3,
                 width: 40,
-                display: { xs: "none", sm: "auto", md: "flex" },
+                 display:{xs:"none", sm:"auto",md :"flex"}
               }}
             >
               LOGIN
@@ -323,9 +322,7 @@ const Navbar = () => {
               filter: "brightness(0) invert(1)",
             }}
           />
-          <Typography
-            sx={{ fontSize: "0.9rem", fontWeight: 600, color: "#fff" }}
-          >
+          <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, color:"#fff" }}>
             LOGIN
           </Typography>
         </Box>
